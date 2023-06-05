@@ -1,20 +1,24 @@
-ul,li {
+ul, li {
     list-style-type: none;
 }
 
-.sortable .item {
+.sortable-list .item {
     padding:10px 0;
     border-top: 2px solid transparent;
 }
 
 .sortable-list .item * {
+    /* item 하위 class에서 mouse event가 발생하지 않음 */
+    /* 버블링이 발생하지 않음 */
     pointer-events: none;
 }
 
 .sortable-list .item.dragstart {
+    /* item을 drap할 때, 투명도를 설정 */
     opacity: 0.5;
 }
 
 .sortable-list .item.dragover {
+    /* drag over 당하는 item을 line을 주는 효과 */
     border-top-color: green;
 }
